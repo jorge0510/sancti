@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sancti Directory</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Sancti</h1>
+  <input id="search" type="text" placeholder="Search people...">
+  <a href="/logout" class="btn btn-danger btn-sm">Logout</a>
+</header>
+
+<div class="container">
+  <aside class="sidebar">
+    <h2>Filters</h2>
+    <ul>
+      <li id="showAll">All</li>
+      <li id="showFavorites">Favorites</li>
+    </ul>
+  </aside>
+
+  <section class="grid">
+    
+  </section>
+
+  <script>
+    window.userId = "<%= user._id %>";
+    window.favorites = <%- JSON.stringify(favorites) %>;
+  </script>
+  <script src="saints.js"></script>
+  <script src="main.js"></script>
+</div>
+
+</body>
+</html>
+
